@@ -47,3 +47,5 @@ No external libraries or frameworks were used - just pure coding fun!
 ---
 
 Enjoy taking care of your new virtual friends, and remember: Happy pets make a Happy Tails Empire! 🎮
+
+This README was created by AI, just for fun! 😊😊
