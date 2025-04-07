@@ -1,0 +1,225 @@
+body {
+    background-image: url('img/game\ background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+    font-family: 'Pixelify Sans', sans-serif;
+    letter-spacing: 2px;
+    margin: 0;
+    
+    h1 {
+      color: #6BC94F;
+      font-size: 48px;
+      text-align: center;
+      margin: 0px;
+    }
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  #create-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff80;
+    width: 332px;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 100px;
+    
+    p {
+      color: #6BC94F;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0;
+    }
+    
+    .form-div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+  
+      input {
+        width: 250px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        padding: 5px;
+        font-size: 16px;
+        font-family: 'Pixelify Sans', sans-serif;
+      }
+      
+      select {
+        width: 250px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        padding: 5px;
+        font-size: 16px;
+        font-family: 'Pixelify Sans', sans-serif;
+      }
+      
+      button {
+        width: 150px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        padding: 5px;
+        font-size: 16px;
+        font-family: 'Pixelify Sans', sans-serif;
+        background-color: #6BC94F;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  #game-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 0px 20px; 
+    margin-right: 100px;
+  }
+  
+  .pet {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0;
+    
+    &-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+      
+      h2 {
+        margin: 0;
+        margin-bottom: 5px;
+      }
+      
+      p {
+        margin: 0;
+      }
+    }
+    
+    &-content {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+    
+    &-img {
+      &-initial {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+        margin-right: 15px;
+        animation: zoomIn 1s ease-out forwards;
+      }
+      
+      width: 190px;
+      height: 190px;
+      object-fit: contain;
+      margin-right: 15px;
+      
+      &.bouncing {
+        animation: bounce 2s ease-in-out infinite;
+      }
+    }
+    
+    &-stats {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    &-actions {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+  }
+  
+  .stat-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5px;
+    
+    p {
+      margin: 0;
+    }
+  }
+  
+  .progress {
+    &-container {
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 15px;
+      margin-top: 5px;
+    }
+    
+    &-bar {
+      height: 100%;
+      width: 0%;
+      transition: width 0.4s ease-in-out;
+      
+      &.energy {
+        background: #f44336;
+      }
+      
+      &.fullness {
+        background: #4caf50;
+      }
+      
+      &.happiness {
+        background: #2196f3;
+      }
+    }
+  }
+  
+  .action-btn {
+    padding: 8px 16px;
+    background-color: #6BC94F;
+    color: white;
+    font-family: 'Pixelify Sans', sans-serif;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Happy Tails Empire</h1>
+    <main>
+        <section id="create-container">
+            <h2>New Character</h2>
+                <div class="form-div">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <select name="animalType" id="animalType" required>
+                        <option disabled selected value>Animal type</option>
+                        <option value="jinglebottom">Jinglebottom</option>
+                        <option value="wobblenose">Wobblenose</option>
+                        <option value="bimbleflop">Bimbleflop</option>
+                        <option value="jollytail">Jollytail</option>
+                    </select>
+                    <button id="create-btn">Create</button>
+                </div>
+                <h2>History</h2>
+                <div id="history-container"></div>
+                <p id="history-message"></p>
+        </section>
+        <section id="game-container">
+
+        </section>
+    </main>
+</body>
+</html>
