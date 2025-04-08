@@ -43,17 +43,24 @@ class Pet {
 
     // Timer för att minska stats
     startTimer(callback) {
-        this.timer = setTimeout(() => {
-            const isAlive = this.timerStats();
-            
-            if (callback) callback(this, !isAlive);
-            
+        if (this.timer) {
+            this.stopTimer();
+        }
+        const self = this;
+
+        this.timer = setTimeout(function timerFunction() {
+            const isAlive = self.timerStats();
+            if (callback) callback(self, !isAlive);
             if (isAlive) {
-                this.startTimer(callback);
+                self.timer = setTimeout(timerFunction, 10000);
+            } else {
+                
+                self.stopTimer();
             }
         }, 10000);
     }
 
+    // Stanna timer 
     stopTimer() {
         if (this.timer) {
             clearTimeout(this.timer);
